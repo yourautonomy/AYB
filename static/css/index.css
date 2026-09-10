@@ -1,0 +1,124 @@
+/*Variables*/
+:root{
+    --font-nav-:system-ui, sans-serif;
+    --naranja-iconos-:#D85A30;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Navbar*/
+
+nav{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #fff;
+    padding: .5rem 1.5rem;
+    align-items: center;
+     border-bottom: 1px solid #E5E9EE;
+    }
+
+/*img navbar*/
+.nombre-nav img{
+      max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+/*Navbar links*/
+.caracterizticas-nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/*Links en el navbar*/
+.linksNav{
+    text-decoration: none;
+    font-family: var(--font-nav-);
+    color: black;
+    font-size: 1rem;
+}
+
+.linksNav:hover{
+    text-decoration: none;
+    font-family: var(--font-nav-);
+    color: var(--naranja-iconos-);
+    font-size: 1rem;
+}
+/*Button del navbar*/
+
+.contactanos-car button{
+    max-width: 150px;
+    width: 130px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.contactanos-car button:hover{
+    max-width: 150px;
+    width: 130px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    background-color:var(--naranja-iconos-);
+    color: var(--font-nav-);
+}
+/*Menu Hamburguesa*/
+
+.menu-toggle{
+    display: none;
+    background-color: #D85A30; /* o el color que prefieras */
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+/*Navbar responsive*/
+
+@media (max-width: 768px){
+        nav {
+        flex-wrap: wrap;
+        justify-content: space-between; /* esto ya lo tienes, mantiene logo/botón en extremos - está bien así */
+    }
+    .menu-toggle{
+        display: block;
+    }
+ 
+    .caracterizticas-nav{
+        position: fixed;
+        top: 0;
+        right: -100%; /* empieza escondido, fuera de la pantalla a la derecha */
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        transition: right 0.3s ease; /* esto crea el efecto de deslizamiento */
+        box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    }
+
+    .caracterizticas-nav.abierto{
+        right: 0; /* se desliza hasta quedar visible */
+    }
+    .contactanos-car {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .contactanos-car.abierto {
+        display: flex;
+}
+}
