@@ -1,5 +1,7 @@
 const menuToggle = document.querySelector('#menuToggle');
 const navLinks = document.querySelector('#navLinks');
+const auditorio=document.querySelector('.nosotros .container');
+
 const contactBtn = document.querySelector('.contactanos-car');
 menuToggle.addEventListener('click',function(){
     navLinks.classList.toggle('abierto');
@@ -14,3 +16,6 @@ document.addEventListener('click',function(e){
         navLinks.classList.remove('abierto');
     }
 })
+
+//Parte del auditorio
+

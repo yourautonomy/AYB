@@ -2,6 +2,7 @@
 :root{
     --font-nav-:system-ui, sans-serif;
     --naranja-iconos-:#D85A30;
+    --hueso-:#F7F5F2;
 }
 *{
     margin: 0;
@@ -215,4 +216,68 @@ nav{
             max-width: 300px; /* opcional, para que no quede demasiado ancho */
             width: 50%;
     }
+   .servicios-cubes{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+ .cube{
+        width: 100%;
+        max-width: none;   /* anula el 18vw del bloque base */
+        height: auto;      /* deja que el contenido defina la altura */
+        min-height: 8vh;   /* opcional: para que no queden demasiado bajitas */
+        padding: 1rem;     /* opcional: aire interno para el texto de 2 líneas */
+    }
+}
+
+
+/*Nosotros*/
+
+
+.nosotros .container{
+    max-width: 92%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--hueso-);
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    height: auto;
+}
+
+.nosotros-text{
+    flex: 1;
+}
+
+.nosotros-img{
+    flex: 1;
+}
+
+#promo{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.eyebrow{
+    font-family: var(--font-nav-);
+    font-size: 0.9rem;
+    color: rgba(128, 128, 128, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.nosotros-text h2{
+    font-family: 'Georgia', serif; /* o la misma que uses en tu h1 del hero */
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
